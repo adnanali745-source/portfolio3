@@ -1,12 +1,11 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { Card, CardContent } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
 import { Mail, Phone, Linkedin } from "lucide-react";
 
 export default function Portfolio() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-6">
+
       {/* Hero Section */}
       <motion.div
         initial={{ opacity: 0, y: -50 }}
@@ -14,6 +13,8 @@ export default function Portfolio() {
         transition={{ duration: 1 }}
         className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto py-16"
       >
+
+        {/* Profile Image */}
         <div className="flex justify-center">
           <motion.img
             src="/profile.png"
@@ -24,10 +25,44 @@ export default function Portfolio() {
           />
         </div>
 
+        {/* Content */}
         <div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Adnan Ali</h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">
+            Adnan Ali
+          </h1>
+
           <p className="text-lg text-slate-300 mb-6">
             Data Science & AI Enthusiast | Python Developer | Mathematics Graduate
           </p>
 
-          <div className="space-y-3">
+          <div className="space-y-4">
+
+            <div className="flex items-center gap-3">
+              <Mail />
+              <span>adnanali745@gmail.com</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Phone />
+              <span>03023771520</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <Linkedin />
+              <a
+                href="https://www.linkedin.com/in/adnan-ali-97b946361"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:text-blue-400 transition"
+              >
+                linkedin.com/in/adnan-ali-97b946361
+              </a>
+            </div>
+
+          </div>
+        </div>
+
+      </motion.div>
+    </div>
+  );
+}
