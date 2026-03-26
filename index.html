@@ -1,0 +1,33 @@
+import React from "react";
+import { motion } from "framer-motion";
+import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Mail, Phone, Linkedin } from "lucide-react";
+
+export default function Portfolio() {
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white p-6">
+      {/* Hero Section */}
+      <motion.div
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="grid md:grid-cols-2 gap-8 items-center max-w-6xl mx-auto py-16"
+      >
+        <div className="flex justify-center">
+          <motion.img
+            src="/profile.png"
+            alt="Adnan Ali"
+            className="w-72 h-72 object-cover rounded-2xl shadow-2xl border-4 border-slate-700"
+            animate={{ y: [0, -15, 0] }}
+            transition={{ repeat: Infinity, duration: 4 }}
+          />
+        </div>
+
+        <div>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">Adnan Ali</h1>
+          <p className="text-lg text-slate-300 mb-6">
+            Data Science & AI Enthusiast | Python Developer | Mathematics Graduate
+          </p>
+
+          <div className="space-y-3">
