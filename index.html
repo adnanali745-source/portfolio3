@@ -37,25 +37,31 @@ export default function Portfolio() {
 
           <div className="space-y-4">
 
-            <div className="flex items-center gap-3">
-              <Mail />
-              <span>adnanali745@gmail.com</span>
-            </div>
+            <div className="flex gap-4">
+              <a
+                href="tel:03023771520"
+                className="p-3 bg-slate-700 rounded-full hover:bg-blue-500 transition cursor-pointer"
+                title="Call: 03023771520"
+              >
+                <Phone size={24} />
+              </a>
 
-            <div className="flex items-center gap-3">
-              <Phone />
-              <span>03023771520</span>
-            </div>
+              <a
+                href="mailto:adnanali745@gmail.com"
+                className="p-3 bg-slate-700 rounded-full hover:bg-red-500 transition cursor-pointer"
+                title="Email: adnanali745@gmail.com"
+              >
+                <Mail size={24} />
+              </a>
 
-            <div className="flex items-center gap-3">
-              <Linkedin />
               <a
                 href="https://www.linkedin.com/in/adnan-ali-97b946361"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="hover:text-blue-400 transition"
+                className="p-3 bg-slate-700 rounded-full hover:bg-blue-600 transition cursor-pointer"
+                title="LinkedIn Profile"
               >
-                linkedin.com/in/adnan-ali-97b946361
+                <Linkedin size={24} />
               </a>
             </div>
 
